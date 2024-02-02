@@ -7,10 +7,9 @@ pokemon::pokemon(string pName)
 {
     pName = "";
     pDescription = "";
-    pImage = "";
+    //pImage = "";
     pLifepoints = 10;
-    pCapabilitiesSize;
-    pCapabilities;
+    pAbilities;
 }
 
 pokemon::~pokemon() {}
@@ -19,13 +18,13 @@ string pokemon::GetPokemonName() { return pName; }
 
 string pokemon::GetPokemonDescription() { return pDescription; }
 
-string pokemon::GetPokemonImage() { return pImage; }
+//string pokemon::GetPokemonImage() { return pImage; }
 
 int pokemon::SetLifepoints(int lifepoints) { pLifepoints = lifepoints; }
 
-int pokemon::SetCapabilitiesSize(int size) { pCapabilitiesSize = size; }
+int pokemon::SetLevel(int level) { pLevel = level; }
 
-vector <string> pokemon::SetCapabilities(string newCapabilitiy) { pCapabilities[1] = newCapabilitiy; }
+vector <string> pokemon::SetAbilities(string newAbilitiy) { pAbilities[4] = newAbilitiy; }
 
 int pokemon::TakeDamage( int damage) { pLifepoints - damage; }
 
@@ -36,8 +35,8 @@ int pokemon::Heal(int healing) { pLifepoints += healing; cout << pLifepoints << 
 string pokemon::PassOut(string state) { if (pLifepoints <= 0) {state = "Passed Out"; cout << state << endl;} }
 
 string pokemon::GoInAndOutOfPokeball(string position, string command)
-{
-    if (command == "out") { position = "InsidePokeball"; cout << position << endl; if (command == "in") { position = "OutsidePokeball"; cout << position << endl; } }
+{ if (command == "in") { position = " is inside the Pokeball!"; cout << pName << position << endl; 
+if (command == "out") { position = "is outside the Pokeball!"; cout << pName << position << endl; } }
 
 
 /*void EarnMoneyByPointer(int* wallet, int wage) {

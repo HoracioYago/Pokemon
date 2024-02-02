@@ -2,16 +2,19 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
 class pokemon
 {
 
 private:
+
 	string pName;
 	string pDescription;
 	string pImage;
 	int pLifepoints;
-	int pCapabilitiesSize;
-	vector <string> pCapabilities;
+	int pLevel;
+	vector <string> pAbilities;
+	
 
 
 public:
@@ -19,10 +22,10 @@ public:
 	~pokemon();
 	string GetPokemonName();
 	string GetPokemonDescription();
-	string GetPokemonImage();
+	//string GetPokemonImage();
 	int SetLifepoints(int lifepoints);
-	int SetCapabilitiesSize(int size);
-	vector <string> SetCapabilities(string newCapabilities);
+	int SetLevel(int level);
+	vector <string> SetAbilities(string newAbilities);
 
 	int TakeDamage( int damage);
 	int AttackAnotherPokemon(pokemon pokemon, int attack);
