@@ -2,13 +2,18 @@
 using namespace std;
 
 #include "pokemon.h"
+#include "PokeType.h"
+#include "AllAbility.h"
+#include "Ability.h"
+
 
 pokemon::pokemon(string pName)
 {
     pName = "";
     pDescription = "";
-    //pImage = "";
+    pType;
     pLifepoints = 10;
+    pLevel;
     pAbilities;
 }
 

@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-#include "pokemon.h"
+#include "AllPokemon.h"
 
 class Trainer
 {
@@ -15,8 +15,7 @@ private:
 	string tCatchfrase;
 	int tLifepoints;
 	int tMoney;
-	vector <pokemon> tPokemon;
-	//up to [6]
+	vector <pokemon> tPokemon[6];
 	int tPokeballs;
 
 
@@ -26,9 +25,11 @@ public:
 	~Trainer();
 
 	string GetTrainerName();
+	string GetCatchfrase();
 	int SetLifepoints(int lifepoints);
 	int SetMoney(int money);
-	vector <pokemon> SetPokemon(string newAbilities);
+	vector <pokemon> SetPokemon(pokemon newPokemon);
+	
 
 	int GainLoot(int money, int pokeballs);
 
@@ -41,10 +42,7 @@ public:
 	* earn money or new pokeballs after a successful fight
 	* lose a fight
 	*/
-	/*int AttackAnotherPokemon(pokemon pokemon, int attack);
-	string GoInAndOutOfPokeball(string position, string command);
-	string PassOut(string state);
-	int Heal(int healing);*/
+	
 
 };
 

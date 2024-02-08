@@ -3,29 +3,32 @@
 #include <vector>
 using namespace std;
 
+#include "PokeType.h"
+#include "Ability.h"
+
+
 class pokemon
 {
 
 private:
 
 	string pName;
-	string pDescription;
-	string pImage;
+	PokeType pType;
 	int pLifepoints;
 	int pLevel;
-	vector <string> pAbilities;
+	vector <Ability> pAbilities[4];
 	
 
 
 public:
-	pokemon(string pName);
+	
+	pokemon(string pName, PokeType pType, int pLifepoints, int pLevel, Ability pAbilities[4]);
 	~pokemon();
 	string GetPokemonName();
 	string GetPokemonDescription();
-	//string GetPokemonImage();
 	int SetLifepoints(int lifepoints);
 	int SetLevel(int level);
-	vector <string> SetAbilities(string newAbilities);
+	vector <string> SetAbilities(Ability newAbilities);
 
 	int TakeDamage( int damage);
 	int AttackAnotherPokemon(pokemon pokemon, int attack);

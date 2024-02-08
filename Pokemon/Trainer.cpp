@@ -14,3 +14,11 @@ Trainer::Trainer()
 	tPokeballs = 3;
 
 }
+
+string Trainer::GetCatchfrase() { return tFirstName+" "+tLastName; }
+string Trainer::GetCatchfrase() { return tCatchfrase; }
+int Trainer::SetLifepoints(int lifepoints) { pLifepoints = lifepoints; }
+int SetMoney(int money);
+vector <pokemon> SetPokemon(string newAbilities);
+
+int GainLoot(int money, int pokeballs);
