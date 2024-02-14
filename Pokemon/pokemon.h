@@ -1,10 +1,11 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include "PokeType.h"
+#include "AllAbility.h"
+
 using namespace std;
 
-#include "PokeType.h"
-#include "Ability.h"
 
 
 class pokemon
@@ -16,16 +17,15 @@ private:
 	PokeType pType;
 	int pLifepoints;
 	int pLevel;
-	vector <Ability> pAbilities[4];
+	vector <Ability> pAbilities;
 	
 
 
 public:
-	
-	pokemon(string pName, PokeType pType, int pLifepoints, int pLevel, Ability pAbilities[4]);
+	pokemon();
+	pokemon(string name, PokeType type, int lifepoints, int level, vector <Ability> abilities);
 	~pokemon();
 	string GetPokemonName();
-	string GetPokemonDescription();
 	int SetLifepoints(int lifepoints);
 	int SetLevel(int level);
 	vector <string> SetAbilities(Ability newAbilities);
@@ -38,4 +38,5 @@ public:
 
 };
 // FirstC++.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//Battlr logic 1/2 for turns. Random range for enemy pokemon, enemy move, need player turn, enemy turn, check for dead pokemon if yes call for next one
+//Check for low life on wild pokemon

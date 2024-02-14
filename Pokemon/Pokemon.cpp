@@ -7,21 +7,27 @@ using namespace std;
 #include "Ability.h"
 
 
-pokemon::pokemon(string pName)
+pokemon::pokemon()
 {
     pName = "";
-    pDescription = "";
-    pType;
+    pType = PokeType::Normal;
     pLifepoints = 10;
-    pLevel;
-    pAbilities;
+    pLevel = 1;
+    //pAbilities;
+}
+
+pokemon::pokemon(string name, PokeType type, int lifepoints, int level, vector <Ability> abilities)
+{
+    pName = name;
+    pType = type;
+    pLifepoints = lifepoints;
+    pLevel = level;
+    pAbilities = abilities;
 }
 
 pokemon::~pokemon() {}
 
 string pokemon::GetPokemonName() { return pName; }
-
-string pokemon::GetPokemonDescription() { return pDescription; }
 
 //string pokemon::GetPokemonImage() { return pImage; }
 
@@ -29,7 +35,7 @@ int pokemon::SetLifepoints(int lifepoints) { pLifepoints = lifepoints; }
 
 int pokemon::SetLevel(int level) { pLevel = level; }
 
-vector <string> pokemon::SetAbilities(string newAbilitiy) { pAbilities[4] = newAbilitiy; }
+//vector <string> pokemon::SetAbilities(string newAbilitiy) { pAbilities[4] = newAbilitiy; }
 
 int pokemon::TakeDamage( int damage) { pLifepoints - damage; }
 
