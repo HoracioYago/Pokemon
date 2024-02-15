@@ -5,20 +5,19 @@ using namespace std;
 
 #include "PokeType.h"
 
-class Ability
+Class Ability()
 {
-private:
+public
 
-	string aName = "";
-	PokeType aType;
-	int aDamage;
-	int aUses;
+	aName = "";
+	PokeType = aType;
+	aDamage;
+	aUses;
 
-public:
-
-	Ability(string name, PokeType type, int damage, int uses);
-	~Ability();
+private 
 
 
-};
+
+
+}
 

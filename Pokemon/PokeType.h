@@ -18,11 +18,14 @@ enum class PokeType
 	Dragon, //14
 	Dark, //15
 	Steel, //16
-	Fairy //17
+	Fairy; //17
 };
 
 //Fire: is weak to
 // is strong to 
 
+
+
+//then to change string to enum, use an int X to compare to i within enum
 //multiply type weakness by 2 resistance by .5
 //create a method 

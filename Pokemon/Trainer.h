@@ -15,21 +15,18 @@ private:
 	string tCatchfrase;
 	int tLifepoints;
 	int tMoney;
-	vector <pokemon> tPokemon;
+	vector <pokemon> tPokemon[6];
 	int tPokeballs;
 
 
 public:
 
 	Trainer();
-	Trainer(string firstName, string lastName, string catchFrase, int lifepoints, int money, vector <pokemon> pokemon, int pokeballs);
 	~Trainer();
 
-	string Introduce();
-	//string ShowTeam();
-	string GetActiveTeam();
-	
-	//int SetLifepoints(int lifepoints);
+	string GetTrainerName();
+	string GetCatchfrase();
+	int SetLifepoints(int lifepoints);
 	int SetMoney(int money);
 	vector <pokemon> SetPokemon(pokemon newPokemon);
 	
