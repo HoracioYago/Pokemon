@@ -1,48 +1,47 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include "Ability.h"
 using namespace std;
 
-#include "Ability.h"
+static Ability Tackle("Takle", PokeType::Normal, 40, 35);
 
-Ability Scratch = Ability("Takle", Normal, 40, 35);
+static Ability Flamethrower("Flamethrower", PokeType::Fire, 60, 20);
+static Ability Overheat("Overheat", PokeType::Fire, 120, 5);
 
-Ability Flamethrower = Ability("Flamethrower", Fire, 80, 10);
-Ability Overheat = Ability("Overheat", Fire, 80, 10);
+static Ability Surf("Surf", PokeType::Water, 80, 15);
+static Ability HydroPump("Hydro Pump", PokeType::Water, 100, 10);
 
-Ability Surf = Ability("Surf", Water, 80, 10);
-Ability HydroPump = Ability("Hydro Pump", Water, 80, 10);
+static Ability VineWhip("Vine Whip", PokeType::Grass, 50, 30);
+static Ability LeafStorm("Leaf Storm", PokeType::Grass, 80, 15);
 
-Ability VineWhip = Ability("Vine Whip", Leaf, 80, 10);
-Ability LeafStorm = Ability("Leaf Storm", Leaf, 80, 10);
+static Ability ThunderPunch("Thunder Punch", PokeType::Electric, 80, 15);
 
-Ability ThunderPunch = Ability("Thunder Punch", Electric, 80, 10);
+static Ability IceBeam("Ice Beam", PokeType::Ice, 90, 15);
 
-Ability IceBeam = Ability("Ice Beam", Ice, 80, 10);
+static Ability FocusBlast("Focus Blast", PokeType::Fighting, 100, 10);
 
-Ability FocusBlast = Ability("Focus Blast", Fighting, 80, 10);
+static Ability PoisonClaw("Poison Claw", PokeType::Poison, 60, 20);
 
-Ability PosionClaw = Ability("Poison Claw", Poison, 80, 10);
+static Ability Earthquake("Earthquake", PokeType::Ground, 100, 10);
 
-Ability Earthquake = Ability("Earthquake", Ground, 100, 10);
+static Ability WingAttack("Wing Attack", PokeType::Flying, 50, 30);
 
-Ability Peck = Ability("Peck", Flying, 80, 10);
+static Ability Confusion("Confusion", PokeType::Psychic, 70, 20);
 
-Ability Confusion = Ability("Confusion", Psychic, 80, 10);
+static Ability FuryCutter("Fury Cutter", PokeType::Bug, 70, 15);
 
-Ability FuryCutter = Ability("Fury Cutter", Bug, 40, 20);
+static Ability RockSlide("Rock Slide", PokeType::Rock, 80, 15);
 
-Ability RockSlide = Ability("Rock Slide", Rock, 80, 10);
+static Ability ShadowBall("Shadow Ball", PokeType::Ghost, 90, 15);
 
-Ability ShadowBall = Ability("Shadow Ball", Ghost, 80, 10);
+static Ability Outrage("Outrage", PokeType::Dragon, 120, 5);
 
-Ability Outrage = Ability("Outrage", Dragon, 80, 10);
+static Ability Bite("Bite", PokeType::Dark, 60, 20);
 
-Ability Bite = Ability("Bite", Dark, 80, 10);
+static Ability GyroBall("Gyro Ball", PokeType::Steel, 80, 15);
 
-Ability GyroBall = Ability("Gyro Ball", Steel, 80, 10);
+static Ability DisarmingVoice("Disarming Voice", PokeType::Fairy, 80, 15);
 
-Ability DisarmingVoice = Ability("Disarming Voice", Fairy, 80, 10);
-
-vector <ability> AllAbilities = { Scratch, Flamethrower, Overheat, Surf, HydroPump, VineWhip, LeafStorm, TunderPunch, IceBeam, FocusBlast, 
-PoisonClaw, Earthquake, Peck, Confusion, FuryCutter, RockSlider, ShadowBall, Outrage, Bite, GyroBall, DisarmingVoice  };
+//static vector <Ability> AllAbilities { Tackle, Flamethrower, Overheat, Surf, HydroPump, VineWhip, LeafStorm, ThunderPunch, IceBeam, FocusBlast,
+//PoisonClaw, Earthquake, WingAttack, Confusion, FuryCutter, RockSlide, ShadowBall, Outrage, Bite, GyroBall, DisarmingVoice };

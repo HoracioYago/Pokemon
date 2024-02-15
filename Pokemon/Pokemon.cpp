@@ -1,42 +1,63 @@
 #include <iostream>
+#include <vector>
+#include "pokemon.h"
 using namespace std;
 
-#include "pokemon.h"
-#include "PokeType.h"
-#include "AllAbility.h"
-#include "Ability.h"
 
-
-pokemon::pokemon(string pName)
+pokemon::pokemon()
 {
     pName = "";
-    pDescription = "";
     pType;
     pLifepoints = 10;
-    pLevel;
+    pLevel = 1;
     pAbilities;
+}
+
+pokemon::pokemon(string name, PokeType type, int lifepoints, int level, vector <Ability> abilities)
+{
+    pName = name;
+    pType = type;
+    pLifepoints = lifepoints;
+    pLevel = level;
+    pAbilities = abilities;
 }
 
 pokemon::~pokemon() {}
 
 string pokemon::GetPokemonName(pokemon pkmn) { return pkmn.pName; }
 
-string pokemon::GetPokemonDescription() { return pDescription; }
+int pokemon::GetPokemonLevel(pokemon pkmn) { return pkmn.pLevel; }
+
+string pokemon::GetPokemonAbilities(pokemon pkmn) 
+{
+    cout << "Moves: " << endl;
+    for (int a = 0; a < 4; a++)
+    {
+        cout << a + 1 << ". " << pAbilities[a].GetAbilityName(pAbilities[a]) << " - " ;
+    }
+    return "";
+}
+
+int pokemon::Heal(pokemon pkmn){}
+
+
+
+
+
+
+//string pokemon::GetPokemonDescription() { return pDescription; }
 
 //string pokemon::GetPokemonImage() { return pImage; }
 
 int pokemon::SetLifepoints(int lifepoints) { pLifepoints = lifepoints; return pLifepoints;}
 
-int pokemon::SetLevel(int level) { pLevel = level; return pLevel; }
+//int pokemon::SetLevel(int level) { pLevel = level; return pLevel; }
 
-vector <string> pokemon::SetAbilities(string newAbilitiy) { pAbilities[4] = newAbilitiy; }
+//vector <string> pokemon::SetAbilities(string newAbilitiy) { pAbilities[4] = newAbilitiy; }
 
 int pokemon::TakeDamage( int damage) { pLifepoints - damage; return pLifepoints;}
 
-//Have to make attack equal the value of ability damage, perhaps need the ability 
-int pokemon::AttackAnotherPokemon(pokemon pokemon, int attack) { pokemon.pLifepoints - attack; return pokemon.pLifepoints;}
-
-int pokemon::Heal(int healing) { pLifepoints += healing; cout << pLifepoints << endl; return pLifepoints; };
+//Have to make attack equal the value of ability damage, perhaps need the ability int pokemon::Heal(int healing) { pLifepoints += healing; cout << pLifepoints << endl; return pLifepoints; };
 
 string pokemon::PassOut(string state) { if (pLifepoints <= 0) { state = "Passed Out"; cout << state << endl; } return state; }
 
@@ -44,6 +65,7 @@ string pokemon::GoInAndOutOfPokeball(string position, string command)
 {
     if (command == "in") { position = " is inside the Pokeball!"; cout << pName << position << endl; }
     if (command == "out") { position = "is outside the Pokeball!"; cout << pName << position << endl; return position; }
+    return "Not found";
 }
 
 

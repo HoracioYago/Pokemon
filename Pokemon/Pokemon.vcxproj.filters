@@ -27,6 +27,9 @@
     <ClCompile Include="PokeType.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Ability.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pokemon.h">
@@ -45,15 +48,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AllPokemon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TrainerBattle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="WildEncounter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Battle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

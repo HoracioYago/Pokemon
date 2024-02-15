@@ -18,7 +18,7 @@ enum class PokeType
 	Dragon, //14
 	Dark, //15
 	Steel, //16
-	Fairy; //17
+	Fairy //17
 };
 
 //Fire: is weak to
