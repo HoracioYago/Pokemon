@@ -24,8 +24,8 @@ public:
 	
 	pokemon(string pName, PokeType pType, int pLifepoints, int pLevel, Ability pAbilities[4]);
 	~pokemon();
-	string GetPokemonName();
-	string GetPokemonDescription();
+
+	string GetPokemonName(pokemon);
 	int SetLifepoints(int lifepoints);
 	int SetLevel(int level);
 	vector <string> SetAbilities(Ability newAbilities);

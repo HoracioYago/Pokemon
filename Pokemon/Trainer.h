@@ -24,9 +24,11 @@ public:
 	Trainer();
 	~Trainer();
 
-	string GetTrainerName();
-	string GetCatchfrase();
-	int SetLifepoints(int lifepoints);
+	string Introduce();
+	//string ShowTeam();
+	string GetActiveTeam();
+	
+	//int SetLifepoints(int lifepoints);
 	int SetMoney(int money);
 	vector <pokemon> SetPokemon(pokemon newPokemon);
 	
