@@ -1,5 +1,6 @@
 #include <iostream>
 #include "pokemon.h"
+#include "Trainer.h"
 
 using namespace std;
 

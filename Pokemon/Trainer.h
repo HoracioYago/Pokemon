@@ -22,6 +22,7 @@ private:
 public:
 
 	Trainer();
+	Trainer(string firstName, string lastName, string catchFrase, int lifepoints, int money, vector <pokemon> pokemon, int pokeballs);
 	~Trainer();
 
 	string Introduce();
