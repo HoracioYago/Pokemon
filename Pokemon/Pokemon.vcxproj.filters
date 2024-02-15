@@ -50,5 +50,14 @@
     <ClInclude Include="AllPokemon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TrainerBattle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WildEncounter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Battle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

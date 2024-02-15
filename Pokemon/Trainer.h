@@ -25,9 +25,11 @@ public:
 	Trainer(string firstName, string lastName, string catchFrase, int lifepoints, int money, vector <pokemon> pokemon, int pokeballs);
 	~Trainer();
 
-	string Introduce() { cout << "Trainer:" << tFirstName << " " << tLastName << endl << tCatchfrase << endl;  };
+	string Introduce();
+	//string ShowTeam();
 	string GetActiveTeam();
-	int SetLifepoints(int lifepoints);
+	
+	//int SetLifepoints(int lifepoints);
 	int SetMoney(int money);
 	vector <pokemon> SetPokemon(pokemon newPokemon);
 	

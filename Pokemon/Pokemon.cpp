@@ -27,27 +27,30 @@ pokemon::pokemon(string name, PokeType type, int lifepoints, int level, vector <
 
 pokemon::~pokemon() {}
 
-string pokemon::GetPokemonName() { return pName; }
+string pokemon::GetPokemonName(pokemon pkmn) { return pkmn.pName; }
 
 //string pokemon::GetPokemonImage() { return pImage; }
 
-int pokemon::SetLifepoints(int lifepoints) { pLifepoints = lifepoints; }
+int pokemon::SetLifepoints(int lifepoints) { pLifepoints = lifepoints; return pLifepoints;}
 
-int pokemon::SetLevel(int level) { pLevel = level; }
+int pokemon::SetLevel(int level) { pLevel = level; return pLevel; }
 
 //vector <string> pokemon::SetAbilities(string newAbilitiy) { pAbilities[4] = newAbilitiy; }
 
-int pokemon::TakeDamage( int damage) { pLifepoints - damage; }
+int pokemon::TakeDamage( int damage) { pLifepoints - damage; return pLifepoints;}
 
-int pokemon::AttackAnotherPokemon(pokemon pokemon, int attack) { pokemon.pLifepoints - attack; }
+//Have to make attack equal the value of ability damage, perhaps need the ability 
+int pokemon::AttackAnotherPokemon(pokemon pokemon, int attack) { pokemon.pLifepoints - attack; return pokemon.pLifepoints;}
 
-int pokemon::Heal(int healing) { pLifepoints += healing; cout << pLifepoints << endl; };
+int pokemon::Heal(int healing) { pLifepoints += healing; cout << pLifepoints << endl; return pLifepoints; };
 
-string pokemon::PassOut(string state) { if (pLifepoints <= 0) {state = "Passed Out"; cout << state << endl;} }
+string pokemon::PassOut(string state) { if (pLifepoints <= 0) { state = "Passed Out"; cout << state << endl; } return state; }
 
 string pokemon::GoInAndOutOfPokeball(string position, string command)
-{ if (command == "in") { position = " is inside the Pokeball!"; cout << pName << position << endl; 
-if (command == "out") { position = "is outside the Pokeball!"; cout << pName << position << endl; } }
+{
+    if (command == "in") { position = " is inside the Pokeball!"; cout << pName << position << endl; }
+    if (command == "out") { position = "is outside the Pokeball!"; cout << pName << position << endl; return position; }
+}
 
 
 /*void EarnMoneyByPointer(int* wallet, int wage) {

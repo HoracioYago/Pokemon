@@ -7,11 +7,11 @@
 
 class Battle 
 {
-	
+public: 
+
 	Trainer player;
 	Trainer enemy;
 	pokemon wild;
-	int turn = 1;
 
-
+	
 };

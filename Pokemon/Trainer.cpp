@@ -26,8 +26,9 @@ Trainer::Trainer(string firstName, string lastName, string catchFrase, int lifep
 	tPokeballs = pokeballs;
 }
 
-//string Trainer::Introduce(){cout << "Trainer:" <<  }
-int Trainer::SetLifepoints(int lifepoints) { tLifepoints = lifepoints; }
+string Trainer::Introduce() { string intro = "Trainer:" + tFirstName + " " + tLastName + "/n" + tCatchfrase + "/n"; return intro; };
+//string Trainer::ShowTeam() { cout << "Your current team is: " << endl; for (int i = 0; i < 6; i++) { cout << i << ". " << tPokemon[i].GetPokemonName(tPokemon[i]) << endl; } }
+//int Trainer::SetLifepoints(int lifepoints) { tLifepoints = lifepoints; }
 int SetMoney(int money);
 vector <pokemon> SetPokemon(vector <pokemon> pokemon);
 
