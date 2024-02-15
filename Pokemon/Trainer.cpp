@@ -49,7 +49,7 @@ void Trainer::Rest() {
 	for (int i = 0; i < 6; i++)
 	{
 		cout << tPokemon[i].GetPokemonName(tPokemon[i]) << " is Rested! ";
-		tPokemon[i].Heal(tPokemon[i]);
+		tPokemon[i].Heal (tPokemon[i]);
 	}
 	cout << "" << endl;
  }
