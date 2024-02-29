@@ -61,6 +61,7 @@ pokemon Trainer::ChoosePokemon(int pkmn) {
 	if (tPokemon[pkmn].pLifepoints > 0) {
 	pokemon active;
 	active = tPokemon[pkmn];
+	pkmn--;
 	cout << "You chose: " << tPokemon[pkmn].GetPokemonName(tPokemon[pkmn]) << " Level: " << tPokemon[pkmn].GetPokemonLevel(tPokemon[pkmn]) << endl;
 	cout << "HP: " << tPokemon[pkmn].GetPokemonLifepoints(tPokemon[pkmn]) << endl;
 	return active;

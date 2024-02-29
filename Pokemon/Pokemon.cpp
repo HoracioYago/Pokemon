@@ -42,12 +42,13 @@ string pokemon::GetPokemonAbilities(pokemon pkmn)
 
 void pokemon::UseAbility(pokemon pkmn, Ability a, pokemon target)
 {
+    
     cout << pkmn.GetPokemonName(pkmn) << " used " << a.GetAbilityName(a) << " !" << endl;
     cout << target.GetPokemonName(target) << " HP: " << target.GetPokemonLifepoints(target) << " - " << a.GetAbilityDamage(a);
     target.pLifepoints - a.aDamage;
     cout << " = " << target.GetPokemonLifepoints(target) << endl;
     a.aUses--;
-    cout << a.GetAbilityName(a) << " - PP = " << a.aUses << "/" << a.aMaxUses;
+    cout << a.GetAbilityName(a) << " - PP = " << a.aUses << endl;
     return;
 }
 
