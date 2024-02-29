@@ -11,16 +11,18 @@ private:
 
 	string aName = "";
 	PokeType aType;
-	int aDamage;
-	int aUses;
 
 public:
+	
+	int aMaxUses=aUses;
+	int aDamage;
+	int aUses;
 
 	Ability();
 	Ability(string name, PokeType type, int damage, int uses);
 	~Ability();
 
 	string GetAbilityName(Ability);
-
+	int GetAbilityDamage(Ability);
 };
 

@@ -14,25 +14,28 @@ private:
 
 	string pName;
 	PokeType pType;
-	int pLifepoints;
 	int pMaxHP = pLifepoints;
 	int pLevel;
-	vector <Ability> pAbilities;
+	
 	
 
 
 public:
 	
+	vector <Ability> pAbilities;
+	int pLifepoints;
+
 	pokemon();
 	pokemon(string pName, PokeType pType, int pLifepoints, int pLevel, vector <Ability> pAbilities);
 	~pokemon();
 
 	string GetPokemonName(pokemon);
 	int GetPokemonLevel(pokemon);
+	int GetPokemonLifepoints(pokemon pkmn);
 	string GetPokemonAbilities(pokemon);
 	int Heal(pokemon);
 
-
+	void UseAbility(pokemon pkmn, Ability a, pokemon target);
 
 
 
@@ -42,8 +45,6 @@ public:
 
 	int TakeDamage( int damage);
 	int AttackAnotherPokemon(pokemon pokemon, int attack);
-	string GoInAndOutOfPokeball(string position, string command);
-	string PassOut(string state);
 	
 
 };

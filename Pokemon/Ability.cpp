@@ -25,3 +25,4 @@ Ability::~Ability()
 }
 
 string Ability::GetAbilityName(Ability ab) { return ab.aName; }
+int Ability::GetAbilityDamage(Ability ab) { return ab.aDamage; }

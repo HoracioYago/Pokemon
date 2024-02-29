@@ -9,6 +9,7 @@ pokemon::pokemon()
     pName = "";
     pType;
     pLifepoints = 10;
+
     pLevel = 1;
     pAbilities;
 }
@@ -27,6 +28,7 @@ pokemon::~pokemon() {}
 string pokemon::GetPokemonName(pokemon pkmn) { return pkmn.pName; }
 
 int pokemon::GetPokemonLevel(pokemon pkmn) { return pkmn.pLevel; }
+int pokemon::GetPokemonLifepoints(pokemon pkmn) { return pkmn.pLifepoints;}
 
 string pokemon::GetPokemonAbilities(pokemon pkmn) 
 {
@@ -38,7 +40,24 @@ string pokemon::GetPokemonAbilities(pokemon pkmn)
     return "";
 }
 
-int pokemon::Heal(pokemon pkmn){}
+void pokemon::UseAbility(pokemon pkmn, Ability a, pokemon target)
+{
+    cout << pkmn.GetPokemonName(pkmn) << " used " << a.GetAbilityName(a) << " !" << endl;
+    cout << target.GetPokemonName(target) << " HP: " << target.GetPokemonLifepoints(target) << " - " << a.GetAbilityDamage(a);
+    target.pLifepoints - a.aDamage;
+    cout << " = " << target.GetPokemonLifepoints(target) << endl;
+    a.aUses--;
+    cout << a.GetAbilityName(a) << " - PP = " << a.aUses << "/" << a.aMaxUses;
+    return;
+}
+
+int pokemon::Heal(pokemon pkmn) {
+    pkmn.pLifepoints = pkmn.pMaxHP; return pkmn.pLifepoints; 
+    for (int a = 0; a < 4; a++)
+    {
+        pAbilities[a].aUses = pAbilities[a].aMaxUses;
+    }
+}
 
 
 
@@ -56,17 +75,6 @@ int pokemon::SetLifepoints(int lifepoints) { pLifepoints = lifepoints; return pL
 //vector <string> pokemon::SetAbilities(string newAbilitiy) { pAbilities[4] = newAbilitiy; }
 
 int pokemon::TakeDamage( int damage) { pLifepoints - damage; return pLifepoints;}
-
-//Have to make attack equal the value of ability damage, perhaps need the ability int pokemon::Heal(int healing) { pLifepoints += healing; cout << pLifepoints << endl; return pLifepoints; };
-
-string pokemon::PassOut(string state) { if (pLifepoints <= 0) { state = "Passed Out"; cout << state << endl; } return state; }
-
-string pokemon::GoInAndOutOfPokeball(string position, string command)
-{
-    if (command == "in") { position = " is inside the Pokeball!"; cout << pName << position << endl; }
-    if (command == "out") { position = "is outside the Pokeball!"; cout << pName << position << endl; return position; }
-    return "Not found";
-}
 
 
 /*void EarnMoneyByPointer(int* wallet, int wage) {

@@ -13,21 +13,33 @@ private:
 	string tFirstName;
 	string tLastName;
 	string tCatchfrase;
-	int tLifepoints;
+	
 	int tMoney;
-	vector <pokemon> tPokemon;
+	
+	int tTeamSize = tPokemon.size();
 	int tPokeballs;
 
 
 public:
 
+	int tLifepoints;
+	vector <pokemon> tPokemon;
+
+
 	Trainer();
 	Trainer(string firstName, string lastName, string catchFrase, int lifepoints, int money, vector <pokemon> pokemon, int pokeballs);
 	~Trainer();
 
+
 	string Introduce();
 	string ShowTeam();
 	void Rest();
+	void SetTeamSize();
+	pokemon ChoosePokemon(int pkmn);
+	void ChooseAbility(pokemon active, int i, pokemon target);
+
+
+
 	//string GetActiveTeam();
 	//
 	////int SetLifepoints(int lifepoints);
