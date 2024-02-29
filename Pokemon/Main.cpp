@@ -3,6 +3,40 @@
 
 using namespace std;
 
+void PokemonJourney(Trainer& player) {
+
+    player.SetTeamSize();
+    cout << endl;
+    cout << "Welcome to your pokemon journey!" << endl << "Pick a path: " << endl;
+    cout << "1. Take a rest and go to sleep." << endl;
+    cout << "2. Go into the tall grass and fight a wild pokemon." << endl;
+    cout << "3. Challenge another Trainer. [CURRENTLY UNAVAILABLE]" << endl;
+
+    int  choice;
+    cin >> choice;
+    cout << endl;
+
+    switch (choice) {
+    case 1:
+
+        player.Rest();
+        PokemonJourney(player);
+
+    case 2:
+
+        WildPokemonBattle(player, Doduo);
+
+    case 3:
+        cout << "Invalid life decision (Sadly...). Better sleep on it..." << endl;
+        player.Rest();
+        PokemonJourney(player);
+    default:
+        cout << "Invalid life decision. Better sleep on it..." << endl;
+        player.Rest();
+        PokemonJourney(player);
+    }
+}
+
 void WildPokemonBattle(Trainer& player, pokemon& wildPokemon) {
 
     int fainted = 0;
@@ -101,40 +135,6 @@ void WildPokemonBattle(Trainer& player, pokemon& wildPokemon) {
         cout << "..." << endl;
         cout << "You have no pokemon left!" << endl;
         cout << "You fainted!" << endl;
-    }
-}
-
-void PokemonJourney(Trainer& player) {
-
-    player.SetTeamSize();
-    cout << endl;
-    cout << "Welcome to your pokemon journey!" << endl << "Pick a path: " << endl;
-    cout << "1. Take a rest and go to sleep." << endl;
-    cout << "2. Go into the tall grass and fight a wild pokemon." << endl;
-    cout << "3. Challenge another Trainer. [CURRENTLY UNAVAILABLE]" << endl;
-
-    int  choice;
-    cin >> choice;
-    cout << endl;
-
-    switch (choice) {
-    case 1:
-
-        player.Rest();
-        PokemonJourney(player);
-
-    case 2:
-
-        WildPokemonBattle(player, Doduo);
-
-    case 3:
-        cout << "Invalid life decision (Sadly...). Better sleep on it..." << endl;
-        player.Rest();
-        PokemonJourney(player);
-    default:
-        cout << "Invalid life decision. Better sleep on it..." << endl;
-        player.Rest();
-        PokemonJourney(player);
     }
 }
 
